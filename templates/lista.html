@@ -1,0 +1,30 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/tabla.css') }}">
+</head>
+<body>
+    <h2>ESTUDIANTES DE ARQUITECTURAS DE SOFTWARE</h2>
+    <div class="container">
+        <table class="text-center">
+            <thead>
+                <tr>
+                    <td>Firstname</td>
+                    <td>Lastname</td>
+                    <td>username</td>
+                    <td>email</td>
+                    <td>password</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dato in data %}
+                <tr>
+                    <td>{{dato.0}}</td>
+                    <td>{{dato.1}}</td>
+                    <td>{{dato.2}}</td>
+                    <td>{{dato.3}}</td>
+                    <td>{{dato.4}}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>

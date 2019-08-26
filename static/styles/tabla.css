@@ -1,0 +1,43 @@
+body{
+    background-image:  url("https://concepto.de/wp-content/uploads/2019/05/servidor-e1557165670831.jpg");
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: center center;
+}
+h2{
+    margin: 5%;
+    text-align: center;
+    color: white;
+}
+.container{
+    width: 80%;
+    margin: auto;
+
+}
+
+table{
+    width: 100%;
+    background-color: bisque;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td{
+    border: solid 1px white;
+    padding: 20px;
+}
+
+thead{
+    background-color: blueviolet;
+    color: white;
+    border-bottom: 5px black;
+}
+
+tr:nth-child(even){
+    background-color: antiquewhite;
+}
+
+tr:hover {
+    background-color: blueviolet;
+    color: white;
+}
