@@ -2,31 +2,40 @@
 <html>
     <head>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles/inicio.css') }}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
+        
     </head>
     <body background-image: url({{ url_for('static', filename='imgages/m2.jpg') }})>
-        <div class='container'>
-                <h3>IMPLEMENTACION DE SERVICIO WEB</h3>
-                <br/>
-                <form action="/api/v1/users", method= "GET">
-                    <button>
-                        <h4>Ver API</h4>
-                    </button>
-                </form>
-                <br/>
-                <form action="/users/list", method= "GET">
-                    <button>
-                        <h4>Ver lista</h4>
-                    </button>
-                </form>
+        <main  class="container p-4" >
+            <h1 class="display-4 text-center title mt-4" style="color: white">Web service</h1>
+            <div class="row">
+                <div class="col-md-4 offset-md-4 my-auto">
+                    <div >
+                        <div >
+                            <form action="/users/list" method="GET">
+                                <button type="submit" class="btn btn-primary btn-block" >
+                                    Ver lista
+                                </button>
 
-        </div>
+                            </form>
+                            <br>
+                            <div>
+                                <form action="/api/v1/users/" method="GET">
+                                    <button type="submit" class="btn btn-primary btn-block" >
+                                        Ver lista con Json
+                                    </button>
+                                </form>
+                            </div>
+                            
+            
+                           
+                          </div>
+                    </div>
 
+                </div>
+            </div>
+    </main>
 
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

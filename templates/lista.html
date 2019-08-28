@@ -1,7 +1,7 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/tabla.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <h2 style="color: white">ESTUDIANTES DE ARQUITECTURAS DE SOFTWARE</h2>
@@ -18,7 +18,7 @@
             </thead>
             <tbody>
                 {% for dato in data %}
-                <tr>
+                <tr class="datos">
                     <td style="color: black"><b>{{dato.0}}</b></td>
                     <td style="color: black"><b>{{dato.1}}</b></td>
                     <td style="color: black"><b>{{dato.2}}</b></td>
