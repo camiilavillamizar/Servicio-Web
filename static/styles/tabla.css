@@ -4,7 +4,7 @@ body{
     background-attachment:fixed;
     background-size: cover;
     background-position: center center;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
 }
 h2{
     margin: 5%;
@@ -30,7 +30,7 @@ td{
 }
 
 thead{
-    background-color: black;
+    background-color: black ;
     color: white;
     border-bottom: 1% black;
 }
@@ -40,7 +40,6 @@ tr:nth-child(even){
 }
 
 tr:hover {
-    background-color: #B292E8;
+    background-color: #CA9FD1;
     color: white;
-    
 }

@@ -9,22 +9,18 @@ db = SQLAlchemy(app)
 
 app.secret_key = 'mysecretkey'
 
-#vista de inicio
 @app.route("/", methods=['GET'])
 def inicio():
     return render_template('inicio.html')
 
-#Parte donde se despliega la lista de estudiantes de la base datos
-@app.route("/users/list", methods=['GET'])
+@app.route("/users/list",  methods=['GET'])
 def lista():
     estudiantes = db.engine.execute("SELECT * FROM users")
     return render_template('lista.html', data=estudiantes)
 
-#API donde devuelve el Json
-@app.route('/api/v1/users/',methods=['GET'])
+@app.route('/api/v1/users/')
 def tres():
-    resultado= db.engine.execute('SELECT * FROM users')
-    return jsonify({'Json': [dict(row) for row in resultado]})
-
+    data= db.engine.execute('select * from users')
+    return jsonify({'Listado': [dict(row) for row in data]})
 if __name__ == "__main__":
     app.run(debug= True, host= '0.0.0.0', port=80)
