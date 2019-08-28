@@ -28,9 +28,9 @@ td{
 }
 
 thead{
-    background-color: blueviolet;
+    background-color: black;
     color: white;
-    border-bottom: 5px black;
+    border-bottom: 1% black;
 }
 
 tr:nth-child(even){
@@ -38,6 +38,7 @@ tr:nth-child(even){
 }
 
 tr:hover {
-    background-color: blueviolet;
+    background-color: #B292E8;
     color: white;
+    
 }

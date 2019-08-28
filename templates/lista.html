@@ -1,8 +1,10 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/tabla.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>ESTUDIANTES DE ARQUITECTURAS DE SOFTWARE</h2>
+    <h2 style="color: white">ESTUDIANTES DE ARQUITECTURAS DE SOFTWARE</h2>
     <div class="container">
         <table class="text-center">
             <thead>
@@ -17,14 +19,19 @@
             <tbody>
                 {% for dato in data %}
                 <tr>
-                    <td>{{dato.0}}</td>
-                    <td>{{dato.1}}</td>
-                    <td>{{dato.2}}</td>
-                    <td>{{dato.3}}</td>
-                    <td>{{dato.4}}</td>
+                    <td style="color: black"><b>{{dato.0}}</b></td>
+                    <td style="color: black"><b>{{dato.1}}</b></td>
+                    <td style="color: black"><b>{{dato.2}}</b></td>
+                    <td style="color: black"><b>{{dato.3}}</b></td>
+                    <td style="color: black"><b>{{dato.4}}</b></td>
                 </tr>
                 {% endfor%}
             </tbody>
         </table>
+        <form action="/" method="GET" > 
+            <button type="submit" class="btn btn-primary btn-block" >
+                    volver
+                </button>
+    </form>
     </div>
 </body>
