@@ -21,6 +21,6 @@ def lista():
 @app.route('/api/v1/users/')
 def tres():
     data= db.engine.execute('select * from users')
-    return jsonify({'Listado': [dict(row) for row in data]})
+    return jsonify({'Json': [dict(row) for row in data]})
 if __name__ == "__main__":
     app.run(debug= True, host= '0.0.0.0', port=80)

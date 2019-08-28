@@ -19,7 +19,7 @@ h2{
 
 table{
     width: 100%;
-    background-color: bisque;
+    background-color: #EEE1FF;
     text-align: center;
     border-collapse: collapse;
 }
@@ -35,11 +35,4 @@ thead{
     border-bottom: 1% black;
 }
 
-tr:nth-child(even){
-    background-color: antiquewhite;
-}
 
-tr:hover {
-    background-color: #CA9FD1;
-    color: white;
-}
