@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 from flask_sqlalchemy import SQLAlchemy
+import json
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -9,6 +10,7 @@ db = SQLAlchemy(app)
 
 app.secret_key = 'mysecretkey'
 
+ 
 @app.route("/", methods=['GET'])
 def inicio():
     return render_template('inicio.html')
@@ -20,7 +22,13 @@ def lista():
 
 @app.route('/api/v1/users/')
 def tres():
-    data= db.engine.execute('select * from users')
-    return jsonify({'Json': [dict(row) for row in data]})
+     data= db.engine.execute('select * from users')
+     otrcosa=json.dumps({'Json': [dict(row) for row in data]})
+     f=open('archivo.json','w')
+     f.write(otrcosa)
+     return render_template('inicio.html')
+     f.close()
+    
+    
 if __name__ == "__main__":
     app.run(debug= True, host= '0.0.0.0', port=80)
